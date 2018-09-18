@@ -6,9 +6,8 @@ Instructions:
 Wait for the profile instance to start, then click on the node in the topology and choose the `shell` menu item. 
 """
 
-# Import the Portal object.
+
 import geni.portal as portal
-# Import the ProtoGENI library.
 import geni.rspec.pg as pg
 
 # Create a portal context.
@@ -21,7 +20,7 @@ request = pc.makeRequestRSpec()
 node = request.XenVM("node")
 
 # Uses a CENTOS7-64-STD image.
-node.disk_image = "urn:publicide:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
+node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
 
 # Set the public IP interface to true.
 node.routable_control_ip = "true"

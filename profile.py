@@ -24,7 +24,7 @@ node = request.XenVM("node")
 node.disk_image = "urn:publicide:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
 
 # Set the public IP interface to true.
-routable_ip = true
+node.routable_control_ip = "true"
 
 # Install and execute a script that is contained in the repository.
 node.addService(pg.Execute(shell="sh", command="/local/repository/silly.sh"))
